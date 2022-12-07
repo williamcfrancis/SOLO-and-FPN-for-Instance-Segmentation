@@ -22,6 +22,9 @@ The dataset used in this project contains three classes across 3265 images: vehi
 * A numpy array of masks ($300 \times 400$).
 * A list of ground truth labels by image.
 * A list of bounding boxes by image.
+* 
+A few samples from the dataset are visualized below:
+![image](https://user-images.githubusercontent.com/38180831/206131282-32a53196-dc43-4dcb-acaa-7b8f285d90e3.png)
 
 Note that the mask array is flattened; to determine which masks belong to which image, I count the number of labels associated with that image. For example, if the first few images have 3, 2, and 4 labels, masks 0-2 would belong to image 1, masks 3-4 would belong to image 2, etc. The masks are ordered correctly to allow for this. You can find the dataset set [here](https://drive.google.com/drive/folders/1eP7FtPaWfJ5zLdcsZYl6eyn5EYixkFn8)
 
@@ -68,6 +71,8 @@ I am using a pretrained backbone (which includes an FPN). A template for the net
 The feature pyramid extracted below has strides $[4,8,16,32,64]$ over the original image. To match the SOLO paper, I interpolated this to have strides $[8,8,16,32,32]$.
 
 ### Target Assignment
+![image](https://user-images.githubusercontent.com/38180831/206131667-d8ad8e0c-0ed8-4588-ae5d-d7e0c31c7344.png)
+
 Some notes about generating the ground truth targets:
 * The FPN levels can be though of as different grid sizes cut through the image.
 * Each target is assigned to a certain FPN level if $\sqrt{wh}$ from the bounding box falls within the `scale_range` associated with that level. Note that these overlap, so we may assign the same target to multiple levels.
@@ -106,3 +111,11 @@ Here, we merge the predictions across all the FPN levels into a single list of p
 
 ### Matrix NMS
 Inspired by Soft-NMS, MatrixNMS suppresses mask predictions with a lower score based on their similarity to predictions with a higher score in a completely vectorized manner.
+
+## Results
+#### Training and Validation Losses:
+![image](https://user-images.githubusercontent.com/38180831/206131896-4da3f6da-cba2-4258-9166-46490449fdc5.png)
+
+#### Inference results:
+![image](https://user-images.githubusercontent.com/38180831/206132024-65e31c94-191e-482e-b991-9403fa339c47.png)
+
