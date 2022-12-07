@@ -18,8 +18,8 @@ These dense predictions are produced at several different scales using a Feature
 ### Dataset Structure
 The dataset used in this project contains three classes across 3265 images: vehicles, people, and animals. The dataset contains the following elements:
 
-* A numpy array of images ($3 \times 300 \times 400$).
-* A numpy array of masks ($300 \times 400$).
+* A numpy array of images - $3 \times 300 \times 400$.
+* A numpy array of masks - $300 \times 400$.
 * A list of ground truth labels by image.
 * A list of bounding boxes by image.
 
