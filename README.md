@@ -15,7 +15,7 @@ These dense predictions are produced at several different scales using a Feature
 <div><img src="https://github.com/LukasZhornyak/CIS680_files/raw/main/HW3/fig4.png" width=300/></div>
 
 ## Dataset
-Download the dataset from [here]([https://drive.google.com/drive/folders/1eP7FtPaWfJ5zLdcsZYl6eyn5EYixkFn8](https://drive.google.com/drive/folders/1iktH8qSbiy-A_59IbeiKclqx61XBg986?usp=sharing))
+Here I am using a subset of the COCO dataset. You can download the dataset from [here]([https://drive.google.com/drive/folders/1eP7FtPaWfJ5zLdcsZYl6eyn5EYixkFn8](https://drive.google.com/drive/folders/1iktH8qSbiy-A_59IbeiKclqx61XBg986?usp=sharing)
 ### Dataset Structure
 The dataset used in this project contains three classes across 3265 images: vehicles, people, and animals. The dataset contains the following elements:
 
