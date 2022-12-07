@@ -1,4 +1,4 @@
-# SOLO and FPN for Instance Segmentation
+# Segmenting Objects by LOcation (SOLO) and FPN
 ## Overview
 Instance segmentation can be thought of as a combination of object detection and semantic segmentation, the former of which I have implemented in [this repository](https://github.com/williamcfrancis/YOLOv3-from-scratch-for-Object-Detection). A visulization of this relationship can be seen in the following figure.
 
