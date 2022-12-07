@@ -72,6 +72,7 @@ I am using a pretrained backbone (which includes an FPN). A template for the net
 The feature pyramid extracted below has strides $[4,8,16,32,64]$ over the original image. To match the SOLO paper, I interpolated this to have strides $[8,8,16,32,32]$.
 
 ### Target Assignment
+Target assignment based on the 5 different FPN levels:
 ![image](https://user-images.githubusercontent.com/38180831/206131667-d8ad8e0c-0ed8-4588-ae5d-d7e0c31c7344.png)
 
 Some notes about generating the ground truth targets:
