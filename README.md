@@ -22,7 +22,7 @@ The dataset used in this project contains three classes across 3265 images: vehi
 * A numpy array of masks ($300 \times 400$).
 * A list of ground truth labels by image.
 * A list of bounding boxes by image.
-* 
+
 A few samples from the dataset are visualized below:
 ![image](https://user-images.githubusercontent.com/38180831/206131282-32a53196-dc43-4dcb-acaa-7b8f285d90e3.png)
 
