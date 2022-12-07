@@ -34,12 +34,10 @@ I applied the following transformations to each image:
 * 
 ### Model
 #### Architecture
-The model architecture is summarized in fig. 7 and tables 1 and 2.
+The model architecture is summarized in the following figures and tables.
 
 <div><img src="https://github.com/LukasZhornyak/CIS680_files/raw/main/HW3/fig7.png" width=500/></div>
-<center>Figure 7: SOLO branch structure.</center>
-<br>
-<center>Table 1: Category branch structure.</center>
+
 
 | Layer | Hyperparameters |
 | :--- | :--- |
@@ -52,8 +50,6 @@ The model architecture is summarized in fig. 7 and tables 1 and 2.
 | conv7 | Kernel size $= 3\times3\times256$, stride $= 1$, pad $= 1$, bias $= \text{False}$. <br> Followed by GroupNorm, num_groups $=32$ and ReLU |
 | conv_out | Kernel size $= 3\times3\times(C-1)$, stride $= 1$, pad $= 1$, bias $= \text{True}$. <br> Followed by Sigmoid layer. Note $C = 4$ here (number of classes + background). |
 
-<br>
-<center>Table 2: Mask branch structure.</center>
 
 | Layer | Hyperparameters |
 | :--- | :--- |
