@@ -15,6 +15,7 @@ These dense predictions are produced at several different scales using a Feature
 <div><img src="https://github.com/LukasZhornyak/CIS680_files/raw/main/HW3/fig4.png" width=300/></div>
 
 ## Dataset
+Download the dataset from [here](https://drive.google.com/drive/folders/1eP7FtPaWfJ5zLdcsZYl6eyn5EYixkFn8)
 ### Dataset Structure
 The dataset used in this project contains three classes across 3265 images: vehicles, people, and animals. The dataset contains the following elements:
 
@@ -26,7 +27,7 @@ The dataset used in this project contains three classes across 3265 images: vehi
 A few samples from the dataset are visualized below:
 ![image](https://user-images.githubusercontent.com/38180831/206131282-32a53196-dc43-4dcb-acaa-7b8f285d90e3.png)
 
-Note that the mask array is flattened; to determine which masks belong to which image, I count the number of labels associated with that image. For example, if the first few images have 3, 2, and 4 labels, masks 0-2 would belong to image 1, masks 3-4 would belong to image 2, etc. The masks are ordered correctly to allow for this. You can find the dataset set [here](https://drive.google.com/drive/folders/1eP7FtPaWfJ5zLdcsZYl6eyn5EYixkFn8)
+Note that the mask array is flattened; to determine which masks belong to which image, I count the number of labels associated with that image. For example, if the first few images have 3, 2, and 4 labels, masks 0-2 would belong to image 1, masks 3-4 would belong to image 2, etc. The masks are ordered correctly to allow for this. 
 
 ### Loading and Batching
 I applied the following transformations to each image:
