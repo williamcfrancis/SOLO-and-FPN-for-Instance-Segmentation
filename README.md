@@ -104,13 +104,13 @@ $$D(p, q) = \frac{2 \sum_{x,y}(p_{x,y} \cdot q_{x,y})}{\sum_{x,y}p_{x,y}^2 + \su
 ## Post Processing
 Post processing consists of three steps: points NMS, concatenation and sorting, and matrix NMS. A summary of each of these steps is provided below. In addition, the final mask prediction is a binary mask based on the mask thresholding parameter.
 
-### Points NMS
+### 1. Points NMS
 Non-max suppression for the category predictions, applied to each channel sperately. A maxpooling with a kernel size of 2.
 
-### Concatenation and Sorting
+### 2. Concatenation and Sorting
 Here, we merge the predictions across all the FPN levels into a single list of predictions, sorted by their predicted score. This involves rescaling the predicted masks appropriately.
 
-### Matrix NMS
+### 3. Matrix NMS
 Inspired by Soft-NMS, MatrixNMS suppresses mask predictions with a lower score based on their similarity to predictions with a higher score in a completely vectorized manner.
 
 ## Results
