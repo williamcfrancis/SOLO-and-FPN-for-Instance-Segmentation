@@ -114,6 +114,11 @@ Here, we merge the predictions across all the FPN levels into a single list of p
 ### 3. Matrix NMS
 Inspired by Soft-NMS, MatrixNMS suppresses mask predictions with a lower score based on their similarity to predictions with a higher score in a completely vectorized manner.
 
+## Run
+1. Open the file [SOLO_instance_segmentation.ipynb](https://github.com/williamcfrancis/SOLO-from-scratch-for-Instance-Segmentation/blob/main/SOLO_instance_segmentation.ipynb) in Google Colab, Jupyter Notebook or other code editor that supports ipynb files.
+2. Download the data and load it
+3. Run the cells sequentially
+
 ## Results
 #### Training and Validation Losses:
 ![image](https://user-images.githubusercontent.com/38180831/206131896-4da3f6da-cba2-4258-9166-46490449fdc5.png)
